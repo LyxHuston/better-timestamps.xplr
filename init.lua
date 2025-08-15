@@ -55,7 +55,7 @@ local function setup(args)
 		if percent < unedited_transparent then
 			return only_fore:format(fore) .. str .. "\x1b[0m"
 		end
-		local back = 232 + round(curve_func_(percent))
+		local back = round(curve_func_(percent))
 		return foreback:format(fore, back) .. str .. "\x1b[0m"
 	end
 end
