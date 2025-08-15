@@ -37,8 +37,9 @@ local function setup(args)
 	local format = args.format or "%a %b %d %X %Y"
 	local length = args.length or 24
 	local unedited_transparent = args.unedited_transparent or 0.04
+	local column = args.column or 5
 
-	xplr.config.general.table.col_widths[5] = { Length = length }
+	xplr.config.general.table.col_widths[column] = { Length = length }
 
 
 	local foreback = string.char(27) .. '[38;5;%d;48;5;%dm'

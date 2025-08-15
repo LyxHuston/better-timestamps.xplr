@@ -11,6 +11,7 @@ Seeing how recently a file was edited in a more immediate way can help you keep 
 # Parameters:
 
 * `color_func` (default range between `232` (black) and `255` (white)): A function that, given the output of `time_curve`, returns an integer ansi color code.  See [this comment](https://gist.github.com/JBlond/2fea43a3049b38287e5e9cefc87b2124?permalink_comment_id=3892823#gistcomment-3892823) for a visual display of colors to codes.  This value must be an integer.  If it is not, it will be automatically rounded to the nearest integer.
+* `column` (default `5`): The index of the column to set the length for.  This should only be set if you have moved the columns of the default table before setting up this plugin.
 * `format` (default `"%a %b %d %X %Y"`, identical to xplr default): The format string to display the date with.  See [the lua docs](https://www.lua.org/pil/22.1.html) for more information.
 * `length` (default `24`): The column width of the date column.  This should be long enough to fit your `format` for any date.
 * `time_curve` (default interpolates last edited time between startup and current time): A function that, when given the last modified timestamp in seconds, returns a float between 0 and 1.  If it is not, it will be clamped to between those two values. 
