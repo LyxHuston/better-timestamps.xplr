@@ -15,7 +15,7 @@ Seeing how recently a file was edited in a more immediate way can help you keep 
 * `format` (default `"%a %b %d %X %Y"`, identical to xplr default): The format string to display the date with.  See [the lua docs](https://www.lua.org/pil/22.1.html) for more information.
 * `length` (default `24`): The column width of the date column.  This should be long enough to fit your `format` for any date.
 * `time_curve` (default interpolates last edited time between startup and current time): A function that, when given the last modified timestamp in seconds, returns a float between 0 and 1.  If it is not, it will be clamped to between those two values. 
-* `unedited_transparent` (default 0.04): the value returned by `time_curve` function that the background of the timestamp should be transparent when less than.
+* `unedited_transparent` (default `0.04`): the value returned by `time_curve` function that the background of the timestamp should be transparent when less than.
 
 # Installation:
 
